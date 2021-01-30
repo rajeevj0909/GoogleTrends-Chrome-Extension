@@ -1,0 +1,17 @@
+{
+    "name": "Trends Screen",
+    "version": "1.0",
+    "description": "Each new tab shows the the Google Trends screen.",
+    "manifest_version": 2,
+    "permissions": ["storage"],
+    "options_page": "options.html",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false},
+    "chrome_url_overrides" : {
+      "newtab": "trends.html"},
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"}
+  }
