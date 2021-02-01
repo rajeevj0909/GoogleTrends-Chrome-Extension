@@ -9,7 +9,26 @@
   <script src="options.js"></script>
   <div>
     <h1>Options:</h1>
-    <label>Choose a car:</label>
+
+    <label>Choose number of rows:</label>
+    <select name="rows" onchange="setRows((this.options[this.selectedIndex].value))">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select></br></br>
+
+    <label>Choose number of columns:</label>
+    <select name="columns" onchange="setColumns((this.options[this.selectedIndex].value))">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select></br></br>
+
+    <label>Choose your location:</label>
     <select name="countries" onchange="setCountry((this.options[this.selectedIndex].value))">
       <option value="all_regions">All Regions</option>
       <option value="argentina">Argentina</option>
@@ -60,7 +79,8 @@
       <option value="united_kingdom">United Kingdom</option>
       <option value="united_states">United States</option>
       <option value="vietnam">Vietnam</option>
-    </select>
+    </select></br></br>
+
   </div>
 </body>
 </html>
