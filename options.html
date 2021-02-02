@@ -3,15 +3,35 @@
 
 <head>
   <title>Options</title>
+  <script src="options.js"></script>
+  <style>
+    .grid{
+      background-color: #2196F3;
+      width: 455px;
+      height: 250px;
+      padding: 1px;
+    }
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+    }
+    .box {
+      background-color: #b6deff;
+      display: flex;
+      margin: 5px;
+      padding: 20px;
+      flex: 1;
+    }
+    </style>
 </head>
 
 <body>
-  <script src="options.js"></script>
   <div>
     <h1>Options:</h1>
 
     <label>Choose number of rows:</label>
-    <select name="rows" onchange="setRows((this.options[this.selectedIndex].value))">
+    <select id="rows">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -20,7 +40,7 @@
     </select></br></br>
 
     <label>Choose number of columns:</label>
-    <select name="columns" onchange="setColumns((this.options[this.selectedIndex].value))">
+    <select id="columns">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -29,7 +49,7 @@
     </select></br></br>
 
     <label>Choose your location:</label>
-    <select name="countries" onchange="setCountry((this.options[this.selectedIndex].value))">
+    <select id="location">
       <option value="all_regions">All Regions</option>
       <option value="argentina">Argentina</option>
       <option value="australia">Australia</option>
@@ -81,6 +101,19 @@
       <option value="vietnam">Vietnam</option>
     </select></br></br>
 
+    <button id="save">Save</button>
+  </div></br>
+  <div class="grid" id="GRID">
+    <div class="flex-container" id="grid_rows">
+      <div class="flex-container" id="grid_columns">
+        <div class="box" id="box"></div>
+      </div>
+    </div>
   </div>
+
+  <footer>
+    <p>By Rajeev J</p>
+    <p><a href="https://rajeevj.co.uk">rajeevj.co.uk</a></p>
+  </footer>
 </body>
 </html>
