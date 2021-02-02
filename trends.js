@@ -5,12 +5,10 @@ window.onload = function(){
   
   chrome.storage.sync.get(['rows'], function(result) {
     rows=result.rows;
-    changeAddress(rows,columns,location)
   });
 
   chrome.storage.sync.get(['columns'], function(result) {
     columns=result.columns;
-    changeAddress(rows,columns,location)
   });
 
   chrome.storage.sync.get(['location'], function(result) {
@@ -20,10 +18,7 @@ window.onload = function(){
   
 
   function changeAddress(rows,columns,location){
-    rows.toString()
-    columns.toString()
-    location.toString()
-    var address="https://trends.google.com/trends/hottrends/visualize?nrow="+rows+"&ncol="+columns+"&pn="+location;
+    var address="https://trends.google.com/trends/hottrends/visualize?nrow="+rows.toString()+"&ncol="+columns.toString()+"&pn="+location.toString();
     document.getElementById("trends_location").setAttribute("src", address);
   }
 }
