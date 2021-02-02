@@ -55,7 +55,6 @@ window.onload = function(){
       div_rows.appendChild(div_columns.cloneNode(true));
     }
     var box_height=((120/rows).toString())+"px";
-    console.log(box_height);
     for (var i = 0; i < (rows*columns); i++) {
       document.getElementsByClassName("box")[i].style.height = box_height;
     }
@@ -81,6 +80,7 @@ window.onload = function(){
 
     //Confirmation Message
     alert("Saved Successfully");
+    chrome.tabs.create({url: "chrome://newtab"});
   };
 };
 
