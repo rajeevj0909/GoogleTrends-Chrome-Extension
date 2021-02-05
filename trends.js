@@ -6,16 +6,13 @@ window.onload = function () {
   chrome.storage.sync.get(['rows'], function (result) {
     rows = result.rows;
   });
-
   chrome.storage.sync.get(['columns'], function (result) {
     columns = result.columns;
   });
-
   chrome.storage.sync.get(['location'], function (result) {
     location = result.location;
     changeAddress(rows, columns, location)
   });
-
 
   function changeAddress(rows, columns, location) {
     var address = "https://trends.google.com/trends/hottrends/visualize?nrow=" + rows.toString() + "&ncol=" + columns.toString() + "&pn=" + location.toString();

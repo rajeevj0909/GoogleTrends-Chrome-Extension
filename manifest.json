@@ -1,12 +1,11 @@
 {
-  "name": "Home Screen Trends",
+  "name": "Tab Trends",
   "version": "1.0",
-  "description": "Each new tab shows the the Google Trends screen.",
+  "description": "Each new tab shows the the Google Trends site.",
   "manifest_version": 2,
   "options_page": "options.html",
   "permissions": [
-    "storage",
-    "tabs"
+    "storage"
   ],
   "background": {
     "scripts": [
