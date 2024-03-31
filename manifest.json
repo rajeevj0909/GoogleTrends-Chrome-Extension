@@ -1,17 +1,15 @@
 {
   "name": "Tab Trends",
-  "version": "1.0",
+  "version": "2.0",
   "description": "Each new tab shows the Google Trends site.",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "options_page": "options.html",
   "permissions": [
-    "storage"
+    "storage",
+    "activeTab"
   ],
   "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+    "service_worker": "background.js"
   },
   "chrome_url_overrides": {
     "newtab": "trends.html"
@@ -21,8 +19,7 @@
     "48": "icon.png",
     "128": "icon.png"
   },
-  "browser_action": {
-    "default_icon": "icon.png",
+  "action": {
     "default_popup": "popup.html"
   }
 }
