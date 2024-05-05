@@ -1,12 +1,11 @@
 {
   "name": "Tab Trends",
-  "version": "2.0",
+  "version": "2.1",
   "description": "Each new tab shows the Google Trends site.",
   "manifest_version": 3,
   "options_page": "options.html",
   "permissions": [
-    "storage",
-    "activeTab"
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"
