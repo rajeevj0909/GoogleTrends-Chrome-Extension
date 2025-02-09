@@ -14,10 +14,14 @@ chrome.runtime.onInstalled.addListener(() => {
     for (let [key, { oldValue, newValue }] of Object.entries(changes)) {
       if (key === "rows" || key === "columns" || key === "location") {
         // Grid size or location has changed, send message to content script
-        chrome.scripting.executeScript({
-          targets: [{ tabId: chrome.scripting.TAB_ID_ANY }],
-          files: ["content.js"],
-          args: [newValue],
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+          if (tabs[0]) {
+            chrome.scripting.executeScript({
+              target: { tabId: tabs[0].id },
+              files: ["content.js"],
+              args: [newValue],
+            });
+          }
         });
       }
     }
