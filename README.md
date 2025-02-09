@@ -6,7 +6,7 @@ Each new Chrome Tab displays the current Google Trends.
 1. User needs a device with Google Chrome browser or a browser built on Chromium, this includes Brave, Opera, and Microsoft Edge.
 2. User needs to be signed into a Google account.
 3. Visit the link:
-   <[https://chrome.google.com/webstore/detail/googletrends-chrome-extension/your-extension-id](https://chromewebstore.google.com/detail/tab-trends/pabkdgcmdmclfcnonleljhjfkemfkkng)>
+   <[https://chrome.google.com/webstore/detail/tab-trends](https://chromewebstore.google.com/detail/tab-trends/pabkdgcmdmclfcnonleljhjfkemfkkng)>
 4. Click 'Add to Chrome' to install.
 
 ## Manual Installation
