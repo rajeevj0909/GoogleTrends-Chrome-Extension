@@ -1,7 +1,7 @@
 {
   "name": "Tab Trends",
   "version": "2.2",
-  "description": "Each new tab shows the Google Trends site.",
+  "description": "Transform your new tab into a window to the world with the latest Google Trends!",
   "manifest_version": 3,
   "options_page": "options.html",
   "permissions": [
