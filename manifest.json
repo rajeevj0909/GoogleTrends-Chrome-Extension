@@ -1,6 +1,6 @@
 {
   "name": "Tab Trends",
-  "version": "2.1",
+  "version": "2.2",
   "description": "Each new tab shows the Google Trends site.",
   "manifest_version": 3,
   "options_page": "options.html",

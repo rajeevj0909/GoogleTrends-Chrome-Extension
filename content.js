@@ -1,18 +1,20 @@
 chrome.runtime.onMessage.addListener((updatedValue) => {
   const iframe = document.getElementById("trends_location");
-  const baseUrl = "https://trends.google.com/trends/hottrends/visualize?";
+  const baseUrl = "https://trends.google.com/tv/?";
   let urlParams = "";
 
-  switch (updatedValue[0]) {
-    case "rows":
-      urlParams += `nrow=${updatedValue[0]}`;
-      break;
-    case "columns":
-      urlParams += `ncol=${updatedValue[0]}`;
-      break;
-    case "location":
-      urlParams += `pn=${updatedValue[0]}`;
-      break;
+  if (updatedValue[0] !== undefined) {
+    switch (updatedValue[0]) {
+      case "rows":
+        urlParams += `rows=${updatedValue[0]}`;
+        break;
+      case "columns":
+        urlParams += `cols=${updatedValue[0]}`;
+        break;
+      case "location":
+        urlParams += `geo=${updatedValue[0]}`;
+        break;
+    }
   }
 
   iframe.src = baseUrl + urlParams;
