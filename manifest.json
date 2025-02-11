@@ -1,6 +1,6 @@
 {
   "name": "Tab Trends",
-  "version": "2.2",
+  "version": "2.3",
   "description": "Transform your new tab into a window to the world with the latest Google Trends!",
   "manifest_version": 3,
   "options_page": "options.html",
